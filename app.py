@@ -21,6 +21,7 @@ with st.form(key='transaction_form'):
     description = st.text_input(label="Description")
     quantity = st.number_input(label="Quantity")
     date_time = st.text_input(label="(yyyy/mm/dd HH:MM:SS)")
+    country = st.text_input
 
     # try:
     # # Sử dụng datetime.strptime
@@ -28,8 +29,11 @@ with st.form(key='transaction_form'):
     # except ValueError:
     #     st.error("Định dạng không hợp lệ. Vui lòng nhập theo định dạng dd/mm/yyyy HH:MM:SS.")
     unit_price = st.number_input(label="UnitPrice")
-    customer_id = st.number_input(label="CustomerID")
+    customer_id = st.number_input(label="Customer ID")
     country = st.text_input(label="Country")
+    gender = st.text_gender(label="Gender")
+    location = st.text_gender(label="Location")
+    age = st.text_gender(label="Age")
     
 
     submitted = st.form_submit_button(label="Submit")
@@ -45,6 +49,9 @@ with st.form(key='transaction_form'):
                     "UnitPrice": unit_price,
                     "CustomerID": customer_id,
                     "Country": country,
+                    "Gender": gender,
+                    "Location": location,
+                    "Age": age
                 }
                 
             ]
