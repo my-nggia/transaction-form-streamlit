@@ -4,4 +4,4 @@
 <br> <br>
 **Data:** [Transaction Data](https://docs.google.com/spreadsheets/d/1swvLce5SGDxrZqsb-xFgevDgPQkFq-CHpSi2wYor-6o/edit?usp=sharing)
 <br> <br>
-This is the demo for the Business Intelligence course (TDTU, 2024-2025).
+
