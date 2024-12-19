@@ -31,9 +31,9 @@ with st.form(key='transaction_form'):
     unit_price = st.number_input(label="UnitPrice")
     customer_id = st.number_input(label="Customer ID")
     country = st.text_input(label="Country")
-    gender = st.text_gender(label="Gender")
-    location = st.text_gender(label="Location")
-    age = st.text_gender(label="Age")
+    gender = st.text_input(label="Gender")
+    location = st.text_input(label="Location")
+    age = st.text_input(label="Age")
     
 
     submitted = st.form_submit_button(label="Submit")
