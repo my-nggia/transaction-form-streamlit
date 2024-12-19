@@ -21,8 +21,6 @@ with st.form(key='transaction_form'):
     description = st.text_input(label="Description")
     quantity = st.number_input(label="Quantity")
     date_time = st.text_input(label="(yyyy/mm/dd HH:MM:SS)")
-    country = st.text_input
-
     # try:
     # # Sử dụng datetime.strptime
     #     date_time = datetime.strptime(date_time, "%d/%m/%Y %H:%M:%S")
@@ -51,7 +49,7 @@ with st.form(key='transaction_form'):
                     "Country": country,
                     "Gender": gender,
                     "Location": location,
-                    "Age": age
+                    "Age": age,
                 }
                 
             ]
