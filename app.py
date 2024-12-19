@@ -16,7 +16,7 @@ df = conn.read(worksheet="TransactionData", usecols=list(range(8)), ttl=5)
 # form 
 with st.form(key='transaction_form'):
     
-    invoice_no = st.text_input(label="InvoiceNo")
+    invoice_no = st.text_input(label="Invoice")
     stock_code = st.text_input(label="StockCode")
     description = st.text_input(label="Description")
     quantity = st.number_input(label="Quantity")
@@ -26,12 +26,12 @@ with st.form(key='transaction_form'):
     #     date_time = datetime.strptime(date_time, "%d/%m/%Y %H:%M:%S")
     # except ValueError:
     #     st.error("Định dạng không hợp lệ. Vui lòng nhập theo định dạng dd/mm/yyyy HH:MM:SS.")
-    unit_price = st.number_input(label="UnitPrice")
+    unit_price = st.number_input(label="Price")
     customer_id = st.number_input(label="Customer ID")
     country = st.text_input(label="Country")
     gender = st.text_input(label="Gender")
     location = st.text_input(label="Location")
-    age = st.text_input(label="Age")
+    age = st.number_input(label="Age")
     
 
     submitted = st.form_submit_button(label="Submit")
@@ -39,13 +39,13 @@ with st.form(key='transaction_form'):
         transaction_data = pd.DataFrame(
             [
                 {
-                    "InvoiceNo": invoice_no,
+                    "Invoice": invoice_no,
                     "StockCode": stock_code,
                     "Description": description,
                     "Quantity": quantity,
                     "InvoiceDate": datetime.strptime(date_time, "%Y-%m-%d %H:%M:%S"),
-                    "UnitPrice": unit_price,
-                    "CustomerID": customer_id,
+                    "Price": unit_price,
+                    "Customer ID": customer_id,
                     "Country": country,
                     "Gender": gender,
                     "Location": location,
